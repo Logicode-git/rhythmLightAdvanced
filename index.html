@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RhythmLight</title>
+    
+    <style>
+        button {
+            width: 100%;
+            height: 20%;
+            min-height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <script src="main.js"></script>
+    <div>
+    <label for="bpm">  BPM</label>
+    <input id='bpm' type="number" placeholder="enter BPM" value="120" 
+        style="width: 50px; text-align: center;">
+        <img style="max-width: 150; float: right;" onclick="window.location='https://logicode.study'" src="logicodeLogo.png">
+    </div>
+    
+    <br>
+
+    <div>
+    <div style="display: flex; flex-direction: row;">
+    <div>
+        <input type="color" id="b1_1" value="#000000">
+        <input type="color" id="b1_2" value="#999999">
+        <button onclick="onClick(event)" id="b1"> b1 </button>
+
+        <input type="color" id="b2_1" value="#000000">
+        <input type="color" id="b2_2" value="#999999">
+        <button onclick="onClick(event)" id="b2"> b2 </button>
+
+        <input type="color" id="b4_1" value="#000000">
+        <input type="color" id="b4_2" value="#999999">
+        <button onclick="onClick(event)" id="b4"> b4 </button>
+    </div>
+
+    <div>
+    <button onclick="playDrum(this.name)" name="1"> drum  1 </button>
+    <button onclick="playDrum(this.name)" name="2"> drum  2 </button>
+    <button onclick="playDrum(this.name)" name="4"> drum  4 </button>
+    </div>
+    <button onclick="playDrum('1'); playDrum('2'); playDrum('4'); "> toggle drums </button>
+
+  </div>
+</div>
+<div>
+    <div style="display: flex; flex-direction: row;">
+    <div>
+        <input type="color" id="drum_b1_1" value="#011000">
+        <input type="color" id="drum_b1_2" value="#109900">
+        <button id="drum_b1" onclick="onClick(event)" disabled> drum_b1 </button>
+
+        <input type="color" id="drum_b2_1" value="#18c098">
+        <input type="color" id="drum_b2_2" value="#000000">
+        <button id="drum_b2" onclick="onClick(event) " disabled > drum_b2 </button>
+
+        <input type="color" id="drum_b4_1" value="#1c00cd">
+        <input type="color" id="drum_b4_2" value="#000000">
+        <button id="drum_b4" onclick="onClick(event)" disabled> drum_b3 </button>
+    </div>
+
+    <div>
+
+        
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
