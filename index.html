@@ -6,9 +6,9 @@
     <title>RhythmLight</title>
     
     <style>
-        button {
+        .bitButton {
             width: 100%;
-            height: 20%;
+            min-width: 100px;            
             min-height: 100px;
         }
     </style>
@@ -22,35 +22,36 @@
     <input id='bpm' type="number" placeholder="enter BPM" value="120" 
         style="width: 50px; text-align: center;">
         <img style="max-width: 150; float: right;" onclick="window.location='https://logicode.study'" src="logicodeLogo.png">
+    
+        <button onclick="window.location = window.location"> Reset All </button>
     </div>
     
     <br>
 
     <div>
+    <div style="display: flex; flex-direction: column;">
     <div style="display: flex; flex-direction: row;">
-    <div>
-        <input type="color" id="b1_1" value="#000000">
-        <input type="color" id="b1_2" value="#999999">
-        <button onclick="onClick(event)" id="b1"> b1 </button>
+        
+        <div style="width: 33%;">
+            <input type="color" id="b1_1" value="#000999">
+            <input type="color" id="b1_2" value="#990099">        
+            <button class="bitButton" onclick="onClick(event)" id="b1">
+                 bit X 1 </button>
+        </div>
 
-        <input type="color" id="b2_1" value="#000000">
-        <input type="color" id="b2_2" value="#999999">
-        <button onclick="onClick(event)" id="b2"> b2 </button>
+        <div style="width: 33%;">
+            <input type="color" id="b2_1" value="#011000">
+            <input type="color" id="b2_2" value="#999900">
+            <button class="bitButton" onclick="onClick(event)" id="b2"> b2 </button>
+        </div>
 
-        <input type="color" id="b4_1" value="#000000">
-        <input type="color" id="b4_2" value="#999999">
-        <button onclick="onClick(event)" id="b4"> b4 </button>
+        <div style="width: 33%;">
+            <input type="color" id="b4_1" value="#000000">
+            <input type="color" id="b4_2" value="#009999">
+            <button class="bitButton" onclick="onClick(event)" id="b4"> b4 </button>
+        </div>
+
     </div>
-
-    <div>
-    <button onclick="playDrum(this.name)" name="1"> drum  1 </button>
-    <button onclick="playDrum(this.name)" name="2"> drum  2 </button>
-    <button onclick="playDrum(this.name)" name="4"> drum  4 </button>
-    </div>
-
-    <div>
-    <button onclick="playDrum('1'); playDrum('2'); playDrum('4'); "> toggle drums </button>
-    
     <!-- Youtube player:  -->    
     <div>  
         <br>
@@ -58,37 +59,45 @@
                 id="ytID" 
                 value="https://www.youtube.com/watch?v=IXyyqxGar1Q">
         <br>
-        <button onclick="runYoutube()"> הפעל יוטיוב</button>
-        <div id="ytContainer" style="width: 100%; height: 100%;">
-
-        </div>
+        <button onclick="runYoutube()"> טען יוטיוב</button>
     </div>
 
-    </div>
-
+    <br>
+        
   </div>
   
 </div>
 <div>
-    <div style="display: flex; flex-direction: row;">
+    <div style="display: flex; flex-direction: row;">        
     <div>
+        <button onclick="playDrum(this.name)" name="1"> drum  1 </button>
         <input type="color" id="drum_b1_1" value="#011000">
         <input type="color" id="drum_b1_2" value="#109900">
         <button id="drum_b1" onclick="onClick(event)" disabled> drum_b1 </button>
-
+        
+        <br>
+        
+        <button onclick="playDrum(this.name)" name="2"> drum  2 </button>
         <input type="color" id="drum_b2_1" value="#18c098">
         <input type="color" id="drum_b2_2" value="#000000">
         <button id="drum_b2" onclick="onClick(event) " disabled > drum_b2 </button>
-
-        <input type="color" id="drum_b4_1" value="#1c00cd">
-        <input type="color" id="drum_b4_2" value="#000000">
-        <button id="drum_b4" onclick="onClick(event)" disabled> drum_b3 </button>
-    </div>
-
-    <div>
-
         
+        <br>
+        
+        <button onclick="playDrum(this.name)" name="4"> drum  4 </button>
+        <input type="color" id="drum_b4_1" value="#1c00cd">
+        <input type="color" id="drum_b4_2" value="#990909">
+        <button id="drum_b4" onclick="onClick(event)" disabled> drum_b3 </button>        
+
+        <br>
+        <button onclick="playDrum('1'); playDrum('2'); playDrum('4'); "> toggle drums </button>        
+
+        <br>
+        <div id="ytContainer" style="width: 100%; height: 100%;">
+
+        </div>
     </div>
+    
   </div>
 </div>
 
