@@ -93,3 +93,4 @@ function changeBG(id) {
         elem.name = color1;
     }
 }
+

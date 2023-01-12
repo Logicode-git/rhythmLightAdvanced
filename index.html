@@ -16,6 +16,7 @@
 </head>
 <body>
     <script src="main.js"></script>
+    <script src="yt.js"></script>
     <div>
     <label for="bpm">  BPM</label>
     <input id='bpm' type="number" placeholder="enter BPM" value="120" 
@@ -46,9 +47,27 @@
     <button onclick="playDrum(this.name)" name="2"> drum  2 </button>
     <button onclick="playDrum(this.name)" name="4"> drum  4 </button>
     </div>
+
+    <div>
     <button onclick="playDrum('1'); playDrum('2'); playDrum('4'); "> toggle drums </button>
+    
+    <!-- Youtube player:  -->    
+    <div>  
+        <br>
+        <input type="text" placeholder="הכנס קישור ליוטיוב" 
+                id="ytID" 
+                value="https://www.youtube.com/watch?v=IXyyqxGar1Q">
+        <br>
+        <button onclick="runYoutube()"> הפעל יוטיוב</button>
+        <div id="ytContainer" style="width: 100%; height: 100%;">
+
+        </div>
+    </div>
+
+    </div>
 
   </div>
+  
 </div>
 <div>
     <div style="display: flex; flex-direction: row;">
