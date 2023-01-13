@@ -9,15 +9,22 @@ let data = {
 
 function changeBpm(newBpm) {
     document.getElementById('bpm').value = newBpm
-    btns = document.getElementsByTagName("button");
-    for (b in btns) {
-        btn = btns[b];
-        if (btn.id in data) {
-            // double click, to initial 
-            btn.click();
-            btn.click();
-        }
+    bitButtons_ids = ['b1', 'b2', 'b4']
+    for (i in bitButtons_ids) {
+        bid = bitButtons_ids[i]
+        btn = document.getElementById(bid)
+        btn.click()
+        btn.click()
     }
+    // btns = document.getElementsByTagName("button");
+    // for (b in btns) {
+    //     btn = btns[b];
+    //         console.log(btn.id)
+    //         // double click, to initial 
+    //         btn.click();
+    //         btn.click();
+    //     //}
+    // }
 }
 
 function onClick(event) {
