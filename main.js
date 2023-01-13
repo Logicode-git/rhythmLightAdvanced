@@ -7,6 +7,19 @@ let data = {
     drum_b4: null
 }
 
+function changeBpm(newBpm) {
+    document.getElementById('bpm').value = newBpm
+    btns = document.getElementsByTagName("button");
+    for (b in btns) {
+        btn = btns[b];
+        if (btn.id in data) {
+            // double click, to initial 
+            btn.click();
+            btn.click();
+        }
+    }
+}
+
 function onClick(event) {
     console.log(data)
     console.log(`clicked ${event.target.id}`)
